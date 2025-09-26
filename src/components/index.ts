@@ -1,4 +1,5 @@
 export * from './AttachmentButton';
+export * from './AnimatedSpeedLines';
 export * from './Avatar';
 export * from './BottomSheetSearchbar';
 export * from './Bubble';
@@ -33,6 +34,7 @@ export * from './ModelsResetDialog';
 export * from './ModelSettingsSheet';
 export * from './ModelTypeTag';
 export * from './ProjectionModelSelector';
+export * from './RacingPerformanceIndicator';
 export * from './RenameModal';
 export * from './ResponseBubble';
 export * from './Searchbar';

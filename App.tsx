@@ -29,6 +29,7 @@ import {
   PalHeaderRight,
   HeaderLeft,
   AppWithMigration,
+  AnimatedSpeedLines,
 } from './src/components';
 import {
   ChatScreen,
@@ -68,6 +69,8 @@ const App = observer(() => {
             <L10nContext.Provider value={currentL10n}>
               <NavigationContainer>
                 <BottomSheetModalProvider>
+                  {/* F1 Racing Background Animation */}
+                  <AnimatedSpeedLines intensity="low" color="#E10600" />
                   <Drawer.Navigator
                     useLegacyImplementation={false}
                     screenOptions={{
@@ -158,18 +161,48 @@ const createStyles = (theme: Theme) =>
   StyleSheet.create({
     root: {
       flex: 1,
+      backgroundColor: '#000000',
     },
     headerWithoutDivider: {
       elevation: 0,
       shadowOpacity: 0,
       borderBottomWidth: 0,
-      backgroundColor: theme.colors.background,
+      backgroundColor: '#000000',
+      borderBottomColor: '#E10600',
+      borderBottomWidth: 2,
     },
     headerWithDivider: {
-      backgroundColor: theme.colors.background,
+      backgroundColor: '#000000',
+      borderBottomColor: '#E10600',
+      borderBottomWidth: 2,
     },
     headerTitle: {
       ...theme.fonts.titleSmall,
+      color: '#E10600',
+      fontWeight: 'bold',
+    },
+    // F1 Racing Background Elements
+    racingBackground: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      opacity: 0.05,
+    },
+    speedLine: {
+      position: 'absolute',
+      height: 2,
+      backgroundColor: '#E10600',
+      transform: [{rotate: '15deg'}],
+    },
+    checkeredPattern: {
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      width: 40,
+      height: 40,
+      opacity: 0.1,
     },
   });
 

@@ -83,6 +83,12 @@ export const SidebarContent: React.FC<DrawerContentComponentProps> = observer(
 
     return (
       <GestureHandlerRootView style={styles.sidebarContainer}>
+        {/* F1 Racing Header */}
+        <View style={styles.racingHeader}>
+          <Text style={styles.racingTitle}>🏁 APEXCORE</Text>
+          <Text style={styles.racingSubtitle}>AI Performance Racing</Text>
+        </View>
+        
         <View style={styles.contentWrapper}>
           <DrawerContentScrollView {...props}>
             <Drawer.Section showDivider={false}>

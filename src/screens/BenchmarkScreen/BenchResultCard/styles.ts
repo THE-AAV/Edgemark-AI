@@ -4,10 +4,70 @@ import type {Theme} from '../../../utils/types';
 export const createStyles = (theme: Theme) =>
   StyleSheet.create({
     resultCard: {
-      backgroundColor: theme.colors.surface,
+      backgroundColor: '#1A1A1A',
       borderRadius: 16,
+      borderWidth: 2,
+      borderColor: '#E10600',
+      shadowColor: '#E10600',
+      shadowOffset: {width: 0, height: 4},
+      shadowOpacity: 0.3,
+      shadowRadius: 8,
+      elevation: 8,
+      marginVertical: 8,
+    },
+    // F1 Racing Header
+    racingHeader: {
+      backgroundColor: '#E10600',
+      paddingVertical: 12,
+      paddingHorizontal: 16,
+      marginBottom: 16,
+      borderRadius: 12,
+      alignItems: 'center',
+    },
+    racingTitle: {
+      fontSize: 18,
+      fontWeight: 'bold',
+      color: '#FFFFFF',
+      textAlign: 'center',
+    },
+    racingSubtitle: {
+      fontSize: 12,
+      color: '#00E5FF',
+      textAlign: 'center',
+      marginTop: 4,
+    },
+    // Performance Grid
+    performanceGrid: {
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      justifyContent: 'space-between',
+      marginVertical: 16,
+    },
+    gridItem: {
+      width: '48%',
+      backgroundColor: '#0F0F10',
+      borderRadius: 12,
+      padding: 12,
+      marginBottom: 8,
       borderWidth: 1,
-      borderColor: theme.colors.surfaceVariant,
+      borderColor: '#2A2A2A',
+      alignItems: 'center',
+    },
+    gridValue: {
+      fontSize: 20,
+      fontWeight: 'bold',
+      color: '#E10600',
+      marginBottom: 4,
+    },
+    gridLabel: {
+      fontSize: 11,
+      color: '#00E5FF',
+      textAlign: 'center',
+    },
+    gridUnit: {
+      fontSize: 10,
+      color: '#FFFFFF',
+      opacity: 0.7,
     },
     resultHeader: {
       flexDirection: 'row',

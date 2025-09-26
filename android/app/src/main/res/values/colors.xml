@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="ic_launcher_bg">#0A0A0A</color>
+    <!-- F1 Racing Theme Colors -->
+    <color name="ic_launcher_bg">#000000</color>
     <color name="ic_launcher_fg">#E10600</color>
     <color name="ic_launcher_fg_secondary">#00E5FF</color>
     <color name="ic_launcher_grid">#1A1A1A</color>
     <color name="ic_launcher_grid_stroke">#2A2A2A</color>
+    
+    <!-- F1 Racing Accent Colors -->
+    <color name="f1_red">#E10600</color>
+    <color name="f1_cyan">#00E5FF</color>
+    <color name="f1_black">#000000</color>
+    <color name="f1_dark_gray">#1A1A1A</color>
+    <color name="f1_light_gray">#E5E5E5</color>
+    <color name="f1_gold">#FFD700</color>
+    <color name="f1_silver">#C0C0C0</color>
 </resources>
 

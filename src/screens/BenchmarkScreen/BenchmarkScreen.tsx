@@ -522,6 +522,12 @@ export const BenchmarkScreen: React.FC = observer(() => {
   return (
     <SafeAreaView style={styles.container} edges={['bottom']}>
       <ScrollView style={styles.scrollView}>
+        {/* F1 Racing Header */}
+        <View style={styles.racingHeader}>
+          <Text style={styles.racingTitle}>🏁 APEXCORE BENCHMARK</Text>
+          <Text style={styles.racingSubtitle}>AI Performance Racing Circuit</Text>
+        </View>
+
         <Card elevation={0} style={styles.card}>
           <Card.Content>
             <DeviceInfoCard onDeviceInfo={handleDeviceInfo} />
@@ -556,16 +562,20 @@ export const BenchmarkScreen: React.FC = observer(() => {
 
                     {!isRunning && renderWarningMessage()}
 
-                    <Button
-                      testID="start-test-button"
-                      mode="contained"
-                      onPress={runBenchmark}
-                      disabled={isRunning}
-                      style={styles.button}>
-                      {isRunning
-                        ? l10n.benchmark.buttons.runningTest
-                        : l10n.benchmark.buttons.startTest}
-                    </Button>
+                    <View style={styles.f1Button}>
+                      <Button
+                        testID="start-test-button"
+                        mode="contained"
+                        onPress={runBenchmark}
+                        disabled={isRunning}
+                        buttonColor="transparent"
+                        textColor="#FFFFFF"
+                        style={styles.f1Button}>
+                        {isRunning
+                          ? `🏁 ${l10n.benchmark.buttons.runningTest}`
+                          : `🚀 ${l10n.benchmark.buttons.startTest}`}
+                      </Button>
+                    </View>
 
                     {isRunning && (
                       <View style={styles.loadingContainer}>
