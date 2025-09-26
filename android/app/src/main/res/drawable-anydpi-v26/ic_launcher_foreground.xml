@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- F1-style stylized "A" apex mark with cyan shadow -->
+    <group android:translateX="15" android:translateY="18">
+        <path
+            android:fillColor="@color/ic_launcher_fg"
+            android:pathData="M20,0 L34,36 L28,36 L24,26 L12,26 L8,36 L2,36 L16,0 z M22,20 L18,10 L14,20 z"/>
+        <path
+            android:fillColor="@color/ic_launcher_fg_secondary"
+            android:fillAlpha="0.85"
+            android:pathData="M22,2 L36,38 L30,38 L26,28 L14,28 L10,38 L4,38 L18,2 z"/>
+    </group>
+</vector>
+

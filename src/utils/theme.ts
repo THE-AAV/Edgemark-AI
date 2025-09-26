@@ -8,11 +8,12 @@ import {MD3BaseColors, SemanticColors, Theme} from './types';
 import {withOpacity, stateLayerOpacity} from './colorUtils';
 
 // MD3 key colors (seed colors)
+// ApexCore F1-inspired palette: deep blacks, race-red accents, cool cyan highlights
 const md3BaseColors: Partial<MD3BaseColors> = {
-  primary: '#333333',
-  secondary: '#1E4DF6',
-  tertiary: '#7880FF',
-  error: '#FF653F',
+  primary: '#0A0A0A', // near-black surface/brand base
+  secondary: '#E10600', // F1 red accent
+  tertiary: '#00E5FF', // cyan tech highlight
+  error: '#FF4D4F',
 };
 
 const createBaseColors = (isDark: boolean): MD3BaseColors => {
@@ -21,40 +22,40 @@ const createBaseColors = (isDark: boolean): MD3BaseColors => {
   if (isDark) {
     return {
       ...baseTheme.colors,
-      primary: '#DADDE6',
-      onPrimary: '#44464C',
-      primaryContainer: '#5B5E66',
-      onPrimaryContainer: '#DEE0E6',
-      secondary: '#95ABE6',
-      onSecondary: '#11214C',
-      secondaryContainer: '#424242',
-      onSecondaryContainer: '#E0E0E0',
-      tertiary: '#80E6E4',
-      onTertiary: '#014C4C',
-      tertiaryContainer: '#016665',
-      onTertiaryContainer: '#9EE6E5',
+      primary: '#E5E5E5',
+      onPrimary: '#121212',
+      primaryContainer: '#1A1A1A',
+      onPrimaryContainer: '#F5F5F5',
+      secondary: md3BaseColors.secondary!,
+      onSecondary: '#FFFFFF',
+      secondaryContainer: '#3A0A08',
+      onSecondaryContainer: '#FFD6D4',
+      tertiary: md3BaseColors.tertiary!,
+      onTertiary: '#001014',
+      tertiaryContainer: '#07343A',
+      onTertiaryContainer: '#B6F6FF',
       error: md3BaseColors.error!,
-      onError: '#4C100D',
-      errorContainer: '#661511',
-      onErrorContainer: '#E6ACA9',
+      onError: '#2B0A0A',
+      errorContainer: '#5A1414',
+      onErrorContainer: '#FFE2E2',
       background: '#000000',
-      onBackground: '#ffffff',
-      surface: '#1E1E1E',
-      onSurface: '#E2E2E2',
-      surfaceVariant: '#646466',
-      onSurfaceVariant: '#e3e4e6',
-      outline: '#444444',
-      outlineVariant: '#a1a1a1',
+      onBackground: '#FFFFFF',
+      surface: '#0F0F10',
+      onSurface: '#EDEDED',
+      surfaceVariant: '#2A2A2B',
+      onSurfaceVariant: '#C9C9CC',
+      outline: '#3A3A3C',
+      outlineVariant: '#6E6E73',
       // Additional required MD3 colors
-      surfaceDisabled: withOpacity('#333333', 0.12),
-      onSurfaceDisabled: withOpacity('#e5e5e6', 0.38),
-      inverseSurface: '#e5e5e6',
-      inverseOnSurface: '#333333',
-      inversePrimary: '#5B5E66',
+      surfaceDisabled: withOpacity('#1E1E1F', 0.12),
+      onSurfaceDisabled: withOpacity('#EDEDED', 0.38),
+      inverseSurface: '#EDEDED',
+      inverseOnSurface: '#121212',
+      inversePrimary: '#1A1A1A',
       inverseSecondary: md3BaseColors.secondary!,
-      shadow: '#ffffff',
-      scrim: 'rgba(0, 0, 0, 0.25)',
-      backdrop: 'rgba(38, 37, 37, 0.8)',
+      shadow: '#000000',
+      scrim: 'rgba(0, 0, 0, 0.5)',
+      backdrop: 'rgba(10, 10, 10, 0.9)',
     };
   }
 
@@ -62,38 +63,38 @@ const createBaseColors = (isDark: boolean): MD3BaseColors => {
     ...baseTheme.colors,
     primary: md3BaseColors.primary!,
     onPrimary: '#FFFFFF',
-    primaryContainer: '#DEE0E6',
-    onPrimaryContainer: '#2D2F33',
+    primaryContainer: '#161616',
+    onPrimaryContainer: '#F0F0F0',
     secondary: md3BaseColors.secondary!,
     onSecondary: '#FFFFFF',
-    secondaryContainer: '#E0E0E0',
-    onSecondaryContainer: '#424242',
+    secondaryContainer: '#FFE5E3',
+    onSecondaryContainer: '#400100',
     tertiary: md3BaseColors.tertiary!,
-    onTertiary: '#FFFFFF',
-    tertiaryContainer: '#F1F3FF',
-    onTertiaryContainer: '#013332',
+    onTertiary: '#001014',
+    tertiaryContainer: '#D0FBFF',
+    onTertiaryContainer: '#001F24',
     error: md3BaseColors.error!,
     onError: '#FFFFFF',
-    errorContainer: '#E6ACA9',
-    onErrorContainer: '#330B09',
-    background: '#ffffff',
-    onBackground: '#111111',
-    surface: '#F9FAFB',
-    onSurface: '#333333',
-    surfaceVariant: '#e4e4e6',
-    onSurfaceVariant: '#646466',
-    outline: withOpacity(md3BaseColors.primary!, 0.05),
-    outlineVariant: '#a1a1a1',
+    errorContainer: '#FFE8E8',
+    onErrorContainer: '#3D0E0E',
+    background: '#FFFFFF',
+    onBackground: '#0B0B0C',
+    surface: '#FAFAFA',
+    onSurface: '#1A1A1B',
+    surfaceVariant: '#E9E9EA',
+    onSurfaceVariant: '#4A4A4C',
+    outline: withOpacity('#0B0B0C', 0.06),
+    outlineVariant: '#B8B8BA',
     // Additional required MD3 colors
-    surfaceDisabled: withOpacity('#fcfcfc', 0.12),
-    onSurfaceDisabled: withOpacity('#333333', 0.38),
-    inverseSurface: '#858585',
-    inverseOnSurface: '#fcfcfc',
-    inversePrimary: '#DEE0E6',
-    inverseSecondary: '#95ABE6',
+    surfaceDisabled: withOpacity('#0F0F10', 0.12),
+    onSurfaceDisabled: withOpacity('#8A8A8E', 0.38),
+    inverseSurface: '#1A1A1B',
+    inverseOnSurface: '#FAFAFA',
+    inversePrimary: '#161616',
+    inverseSecondary: md3BaseColors.secondary!,
     shadow: '#000000',
     scrim: 'rgba(0, 0, 0, 0.25)',
-    backdrop: 'rgba(51, 51, 51, 0.6)',
+    backdrop: 'rgba(16, 16, 16, 0.7)',
   };
 };
 
@@ -164,19 +165,19 @@ const createSemanticColors = (
     ? 'rgba(28, 28, 30, 0.92)'
     : 'rgba(118, 118, 128, 0.12)',
 
-  // Thinking bubble specific
-  thinkingBubbleBackground: isDark ? '#142e4d' : '#f0f5fa',
-  thinkingBubbleText: isDark ? '#6abaff' : '#0a5999',
+  // Thinking bubble specific (techy cyan)
+  thinkingBubbleBackground: isDark ? '#07212A' : '#E8FBFF',
+  thinkingBubbleText: isDark ? '#7CEBFF' : '#003845',
   thinkingBubbleBorder: isDark
-    ? 'rgba(74, 140, 199, 0.6)'
-    : 'rgba(10, 89, 153, 0.4)',
-  thinkingBubbleShadow: isDark ? '#4a9fff' : '#0a5999',
+    ? 'rgba(0, 229, 255, 0.45)'
+    : 'rgba(0, 56, 69, 0.25)',
+  thinkingBubbleShadow: isDark ? '#00E5FF' : '#00A2B5',
   thinkingBubbleChevronBackground: isDark
-    ? 'rgba(74, 140, 199, 0.15)'
-    : 'rgba(10, 89, 153, 0.1)',
+    ? 'rgba(0, 229, 255, 0.12)'
+    : 'rgba(0, 162, 181, 0.08)',
   thinkingBubbleChevronBorder: isDark
-    ? 'rgba(74, 140, 199, 0.3)'
-    : 'rgba(10, 89, 153, 0.2)',
+    ? 'rgba(0, 229, 255, 0.28)'
+    : 'rgba(0, 56, 69, 0.18)',
 });
 
 export const fontStyles = {
