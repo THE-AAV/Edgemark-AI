@@ -132,26 +132,31 @@ const styles = StyleSheet.create({
   },
   track: {
     position: 'absolute',
-    top: 30,
+    top: 35,  // Adjusted to align with car
     left: 0,
     right: 0,
-    height: 20,
-    backgroundColor: '#555555', // Slightly lighter for better visibility
-    borderRadius: 10,
-    opacity: 0.8, // Make it faint but visible
+    height: 10,  // Made track thinner
+    backgroundColor: '#555555',
+    borderRadius: 5,
+    opacity: 0.8,
+    zIndex: 1,  // Ensure track appears behind car
   },
   car: {
     position: 'absolute',
-    top: 20,
+    top: 25,  // Adjusted to align with track
     left: 0,
     width: 40,
     height: 40,
     justifyContent: 'center',
     alignItems: 'center',
-    opacity: 1, // Make car fully visible
+    opacity: 1,
   },
   carEmoji: {
-    fontSize: 28, // Larger car emoji
+    fontSize: 28,
+    opacity: 1,  // Ensure full opacity
+    textShadowColor: 'rgba(0, 0, 0, 0.25)',  // Add shadow for better visibility
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 2
     textShadowColor: 'rgba(0, 0, 0, 0.5)',
     textShadowOffset: {width: 1, height: 1},
     textShadowRadius: 2,

@@ -49,9 +49,10 @@ export const createStyles = (theme: MD3Theme) =>
     },
     menuDrawerItem: {
       height: 44,
+      color: '#C0C0C0', // Match the icon color
     },
     versionText: {
-      color: theme.colors.onSurfaceVariant,
+      color: '#C0C0C0', // Match the icon color
       opacity: 0.7,
       fontSize: 12,
       fontWeight: '500',
@@ -62,6 +63,7 @@ export const createStyles = (theme: MD3Theme) =>
     dateLabel: {
       paddingLeft: 16,
       paddingVertical: 10,
+      color: '#C0C0C0', // Match the icon color
     },
     scrollViewContent: {
       flexGrow: 1,

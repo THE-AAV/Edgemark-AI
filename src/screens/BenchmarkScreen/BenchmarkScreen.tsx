@@ -560,7 +560,22 @@ export const BenchmarkScreen: React.FC = observer(() => {
                       disabled={isRunning}
                       buttonColor="#E10600"
                       textColor="#FFFFFF"
-                      style={[styles.button, {backgroundColor: '#E10600', borderRadius: 12, paddingVertical: 16}]}>
+                      style={[
+                        styles.button, 
+                        {
+                          backgroundColor: '#E10600',
+                          borderRadius: 12,
+                          paddingVertical: 16,
+                        }
+                      ]}
+                      labelStyle={{
+                        color: '#FFFFFF',
+                        fontSize: 16,
+                        fontWeight: 'bold',
+                        textShadowColor: 'rgba(0, 0, 0, 0.5)',
+                        textShadowOffset: {width: 0, height: 1},
+                        textShadowRadius: 2,
+                      }}>
                       {isRunning
                         ? `🏁 ${l10n.benchmark.buttons.runningTest}`
                         : `🚀 ${l10n.benchmark.buttons.startTest}`}
