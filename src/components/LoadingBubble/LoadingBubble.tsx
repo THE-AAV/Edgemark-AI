@@ -1,4 +1,4 @@
-import {View, Animated} from 'react-native';
+import {View, Animated, Text} from 'react-native';
 import React, {useEffect, useRef} from 'react';
 
 import {useTheme} from '../../hooks';
@@ -53,11 +53,14 @@ export const LoadingBubble: React.FC = () => {
     <View
       style={[
         styles.container,
-        {backgroundColor: theme.colors.surfaceVariant},
+        {backgroundColor: '#1A1A1A'},
       ]}>
       <LoadingDot delay={0} theme={theme} />
       <LoadingDot delay={200} theme={theme} />
       <LoadingDot delay={400} theme={theme} />
+      <View style={styles.racingText}>
+        <Text style={styles.racingLabel}>🏁 AI RACING</Text>
+      </View>
     </View>
   );
 };

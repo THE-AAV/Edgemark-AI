@@ -29,6 +29,7 @@ import {
   PalHeaderRight,
   HeaderLeft,
   AppWithMigration,
+  AnimatedSpeedLines,
 } from './src/components';
 import {
   ChatScreen,
@@ -68,6 +69,8 @@ const App = observer(() => {
             <L10nContext.Provider value={currentL10n}>
               <NavigationContainer>
                 <BottomSheetModalProvider>
+                  {/* F1 Racing Background Animation */}
+                  <AnimatedSpeedLines intensity="low" color="#E10600" />
                   <Drawer.Navigator
                     useLegacyImplementation={false}
                     screenOptions={{
@@ -156,12 +159,17 @@ const createStyles = (theme: Theme) =>
   StyleSheet.create({
     root: {
       flex: 1,
+<<<<<<< HEAD
       backgroundColor: '#0A0A0A', // F1 Dark racing background
+=======
+      backgroundColor: '#000000',
+>>>>>>> 083e201e01c56783e564228be2039e30f46fe19c
     },
     headerWithoutDivider: {
       elevation: 0,
       shadowOpacity: 0,
       borderBottomWidth: 0,
+<<<<<<< HEAD
       backgroundColor: '#121212', // F1 Surface color
       borderBottomColor: 'rgba(255, 107, 53, 0.2)', // F1 Orange accent
       borderBottomWidth: 1,
@@ -175,6 +183,44 @@ const createStyles = (theme: Theme) =>
       ...theme.fonts.titleSmall,
       color: theme.colors.onBackground,
       fontWeight: '600',
+=======
+      backgroundColor: '#000000',
+      borderBottomColor: '#E10600',
+      borderBottomWidth: 2,
+    },
+    headerWithDivider: {
+      backgroundColor: '#000000',
+      borderBottomColor: '#E10600',
+      borderBottomWidth: 2,
+    },
+    headerTitle: {
+      ...theme.fonts.titleSmall,
+      color: '#E10600',
+      fontWeight: 'bold',
+    },
+    // F1 Racing Background Elements
+    racingBackground: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      opacity: 0.05,
+    },
+    speedLine: {
+      position: 'absolute',
+      height: 2,
+      backgroundColor: '#E10600',
+      transform: [{rotate: '15deg'}],
+    },
+    checkeredPattern: {
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      width: 40,
+      height: 40,
+      opacity: 0.1,
+>>>>>>> 083e201e01c56783e564228be2039e30f46fe19c
     },
   });
 

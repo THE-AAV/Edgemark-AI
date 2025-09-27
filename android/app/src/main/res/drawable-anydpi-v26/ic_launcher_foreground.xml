@@ -4,6 +4,7 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
+<<<<<<< HEAD
     <!-- Pixel Art F1 Car -->
     <group android:translateX="20" android:translateY="25">
         <!-- Car body - orange -->
@@ -145,6 +146,93 @@
         <path
             android:fillColor="#404040"
             android:pathData="M28,18 L29,18 L29,19 L28,19 Z"/>
+=======
+    
+    <!-- F1 Racing Circuit Background -->
+    <path
+        android:fillColor="@color/ic_launcher_grid"
+        android:pathData="M54,8 C78,8 98,28 98,52 C98,76 78,96 54,96 C30,96 10,76 10,52 C10,28 30,8 54,8 Z"/>
+    
+    <!-- Racing Track Outer Ring -->
+    <path
+        android:fillColor="@color/ic_launcher_fg"
+        android:pathData="M54,12 C75,12 92,29 92,50 C92,71 75,88 54,88 C33,88 16,71 16,50 C16,29 33,12 54,12 Z M54,20 C70,20 84,34 84,50 C84,66 70,80 54,80 C38,80 24,66 24,50 C24,34 38,20 54,20 Z"/>
+    
+    <!-- Speed Lines -->
+    <group android:translateX="20" android:translateY="25">
+        <path
+            android:fillColor="@color/ic_launcher_fg_secondary"
+            android:pathData="M0,0 L8,0 L6,4 L0,4 Z"/>
+        <path
+            android:fillColor="@color/ic_launcher_fg_secondary"
+            android:pathData="M0,8 L12,8 L10,12 L0,12 Z"/>
+        <path
+            android:fillColor="@color/ic_launcher_fg_secondary"
+            android:pathData="M0,16 L6,16 L4,20 L0,20 Z"/>
+>>>>>>> 083e201e01c56783e564228be2039e30f46fe19c
     </group>
+    
+    <group android:translateX="70" android:translateY="25">
+        <path
+            android:fillColor="@color/ic_launcher_fg_secondary"
+            android:pathData="M0,0 L8,0 L6,4 L0,4 Z"/>
+        <path
+            android:fillColor="@color/ic_launcher_fg_secondary"
+            android:pathData="M0,8 L12,8 L10,12 L0,12 Z"/>
+        <path
+            android:fillColor="@color/ic_launcher_fg_secondary"
+            android:pathData="M0,16 L6,16 L4,20 L0,20 Z"/>
+    </group>
+    
+    <!-- Central "A" for ApexCore with F1 styling -->
+    <group android:translateX="42" android:translateY="35">
+        <!-- Main A shape -->
+        <path
+            android:fillColor="@color/ic_launcher_fg"
+            android:pathData="M12,0 L20,0 L24,8 L20,8 L18,4 L14,4 L12,8 L8,8 L12,0 Z M16,12 L14,8 L18,8 L16,12 Z"/>
+        
+        <!-- Racing stripe accent -->
+        <path
+            android:fillColor="@color/ic_launcher_fg_secondary"
+            android:pathData="M13,2 L19,2 L17,6 L15,6 L13,2 Z"/>
+    </group>
+    
+    <!-- Circuit checkered pattern corners -->
+    <group android:translateX="15" android:translateY="15">
+        <path
+            android:fillColor="@color/ic_launcher_fg"
+            android:pathData="M0,0 L4,0 L4,4 L0,4 Z"/>
+        <path
+            android:fillColor="@color/ic_launcher_grid"
+            android:pathData="M2,2 L4,2 L4,4 L2,4 Z"/>
+    </group>
+    
+    <group android:translateX="75" android:translateY="15">
+        <path
+            android:fillColor="@color/ic_launcher_fg"
+            android:pathData="M0,0 L4,0 L4,4 L0,4 Z"/>
+        <path
+            android:fillColor="@color/ic_launcher_grid"
+            android:pathData="M2,2 L4,2 L4,4 L2,4 Z"/>
+    </group>
+    
+    <group android:translateX="15" android:translateY="75">
+        <path
+            android:fillColor="@color/ic_launcher_fg"
+            android:pathData="M0,0 L4,0 L4,4 L0,4 Z"/>
+        <path
+            android:fillColor="@color/ic_launcher_grid"
+            android:pathData="M2,2 L4,2 L4,4 L2,4 Z"/>
+    </group>
+    
+    <group android:translateX="75" android:translateY="75">
+        <path
+            android:fillColor="@color/ic_launcher_fg"
+            android:pathData="M0,0 L4,0 L4,4 L0,4 Z"/>
+        <path
+            android:fillColor="@color/ic_launcher_grid"
+            android:pathData="M2,2 L4,2 L4,4 L2,4 Z"/>
+    </group>
+    
 </vector>
 

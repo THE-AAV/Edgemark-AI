@@ -116,6 +116,42 @@ export const BenchResultCard = ({result, onDelete, onShare}: Props) => {
   return (
     <Card elevation={0} style={styles.resultCard}>
       <Card.Content>
+        {/* F1 Racing Header */}
+        <View style={styles.racingHeader}>
+          <Text style={styles.racingTitle}>🏁 {result.modelName}</Text>
+          <Text style={styles.racingSubtitle}>
+            {formatBytes(result.modelSize)} • {formatNumber(result.modelNParams, 2, true, false)} params
+          </Text>
+        </View>
+
+        {/* Performance Grid */}
+        <View style={styles.performanceGrid}>
+          <View style={styles.gridItem}>
+            <Text style={styles.gridValue}>{result.ppAvg.toFixed(1)}</Text>
+            <Text style={styles.gridLabel}>PROMPT PROCESSING</Text>
+            <Text style={styles.gridUnit}>tokens/sec</Text>
+          </View>
+          <View style={styles.gridItem}>
+            <Text style={styles.gridValue}>{result.tgAvg.toFixed(1)}</Text>
+            <Text style={styles.gridLabel}>TOKEN GENERATION</Text>
+            <Text style={styles.gridUnit}>tokens/sec</Text>
+          </View>
+          {result.wallTimeMs && (
+            <View style={styles.gridItem}>
+              <Text style={styles.gridValue}>{formatDuration(result.wallTimeMs)}</Text>
+              <Text style={styles.gridLabel}>TOTAL TIME</Text>
+              <Text style={styles.gridUnit}>duration</Text>
+            </View>
+          )}
+          {result.peakMemoryUsage && (
+            <View style={styles.gridItem}>
+              <Text style={styles.gridValue}>{result.peakMemoryUsage.percentage.toFixed(1)}%</Text>
+              <Text style={styles.gridLabel}>PEAK MEMORY</Text>
+              <Text style={styles.gridUnit}>usage</Text>
+            </View>
+          )}
+        </View>
+
         <View style={styles.resultHeader}>
           <View style={styles.headerLeft}>
             <Text variant="titleSmall" style={styles.modelName}>

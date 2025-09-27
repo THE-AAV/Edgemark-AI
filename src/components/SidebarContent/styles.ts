@@ -6,6 +6,7 @@ export const createStyles = (theme: MD3Theme) =>
   StyleSheet.create({
     sidebarContainer: {
       flex: 1,
+<<<<<<< HEAD
       backgroundColor: '#0A0A0A', // F1 Dark racing background
     },
     // F1 Racing Header
@@ -32,6 +33,45 @@ export const createStyles = (theme: MD3Theme) =>
       color: '#C0C0C0', // Silver
       textAlign: 'left',
       fontWeight: '500',
+=======
+      backgroundColor: '#000000',
+    },
+    // F1 Racing Header
+    racingHeader: {
+      backgroundColor: '#E10600',
+      paddingVertical: 20,
+      paddingHorizontal: 16,
+      alignItems: 'center',
+      borderBottomWidth: 2,
+      borderBottomColor: '#00E5FF',
+    },
+    racingTitle: {
+      fontSize: 20,
+      fontWeight: 'bold',
+      color: '#FFFFFF',
+      textAlign: 'center',
+      marginBottom: 4,
+    },
+    racingSubtitle: {
+      fontSize: 12,
+      color: '#00E5FF',
+      textAlign: 'center',
+    },
+    // Speed Lines Background
+    speedLinesContainer: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      opacity: 0.05,
+    },
+    speedLine: {
+      position: 'absolute',
+      height: 1,
+      backgroundColor: '#E10600',
+      transform: [{rotate: '15deg'}],
+>>>>>>> 083e201e01c56783e564228be2039e30f46fe19c
     },
     divider: {
       marginHorizontal: 16,
