@@ -159,17 +159,12 @@ const createStyles = (theme: Theme) =>
   StyleSheet.create({
     root: {
       flex: 1,
-<<<<<<< HEAD
-      backgroundColor: '#0A0A0A', // F1 Dark racing background
-=======
-      backgroundColor: '#000000',
->>>>>>> 083e201e01c56783e564228be2039e30f46fe19c
     },
     headerWithoutDivider: {
       elevation: 0,
       shadowOpacity: 0,
       borderBottomWidth: 0,
-<<<<<<< HEAD
+
       backgroundColor: '#121212', // F1 Surface color
       borderBottomColor: 'rgba(255, 107, 53, 0.2)', // F1 Orange accent
       borderBottomWidth: 1,
@@ -183,17 +178,17 @@ const createStyles = (theme: Theme) =>
       ...theme.fonts.titleSmall,
       color: theme.colors.onBackground,
       fontWeight: '600',
-=======
+
       backgroundColor: '#000000',
       borderBottomColor: '#E10600',
       borderBottomWidth: 2,
     },
-    headerWithDivider: {
+      headerWithDivider: {
       backgroundColor: '#000000',
       borderBottomColor: '#E10600',
       borderBottomWidth: 2,
     },
-    headerTitle: {
+      headerTitle: {
       ...theme.fonts.titleSmall,
       color: '#E10600',
       fontWeight: 'bold',
@@ -220,7 +215,6 @@ const createStyles = (theme: Theme) =>
       width: 40,
       height: 40,
       opacity: 0.1,
->>>>>>> 083e201e01c56783e564228be2039e30f46fe19c
     },
   });
 

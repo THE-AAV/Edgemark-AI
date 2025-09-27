@@ -5,11 +5,7 @@ export const createStyles = (theme: Theme) =>
   StyleSheet.create({
     container: {
       flex: 1,
-<<<<<<< HEAD
       backgroundColor: '#0A0A0A', // F1 Dark racing background
-=======
-      backgroundColor: '#000000',
->>>>>>> 083e201e01c56783e564228be2039e30f46fe19c
     },
     scrollView: {
       flex: 1,
@@ -17,7 +13,7 @@ export const createStyles = (theme: Theme) =>
     },
     card: {
       marginBottom: 16,
-<<<<<<< HEAD
+
       backgroundColor: 'rgba(255, 107, 53, 0.05)', // F1 Orange tint
       borderRadius: 20,
       borderWidth: 2,
@@ -25,21 +21,13 @@ export const createStyles = (theme: Theme) =>
       shadowColor: '#FF6B35',
       shadowOffset: {width: 0, height: 4},
       shadowOpacity: 0.1,
-=======
-      backgroundColor: '#0F0F10',
-      borderRadius: 16,
-      borderWidth: 1,
-      borderColor: '#E10600',
-      shadowColor: '#E10600',
-      shadowOffset: {width: 0, height: 0},
-      shadowOpacity: 0.3,
->>>>>>> 083e201e01c56783e564228be2039e30f46fe19c
+
       shadowRadius: 8,
       elevation: 8,
     },
     // F1 Racing Header
     racingHeader: {
-<<<<<<< HEAD
+
       backgroundColor: 'transparent',
       paddingVertical: 16,
       paddingHorizontal: 8,
@@ -64,137 +52,7 @@ export const createStyles = (theme: Theme) =>
       textAlign: 'center',
       marginTop: 6,
       fontWeight: '600',
-=======
-      backgroundColor: '#E10600',
-      paddingVertical: 20,
-      paddingHorizontal: 16,
-      marginBottom: 20,
-      borderRadius: 12,
-      alignItems: 'center',
-    },
-    racingTitle: {
-      fontSize: 24,
-      fontWeight: 'bold',
-      color: '#FFFFFF',
-      textAlign: 'center',
-      marginBottom: 8,
-    },
-    racingSubtitle: {
-      fontSize: 14,
-      color: '#00E5FF',
-      textAlign: 'center',
-      fontWeight: '600',
-    },
-    // Speed Lines Background
-    speedLinesContainer: {
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
-      opacity: 0.1,
-    },
-    speedLine: {
-      position: 'absolute',
-      height: 2,
-      backgroundColor: '#E10600',
-      transform: [{rotate: '15deg'}],
-    },
-    // F1 Button Styles
-    f1Button: {
-      backgroundColor: '#E10600',
-      borderRadius: 12,
-      paddingVertical: 16,
-      marginVertical: 8,
-      shadowColor: '#E10600',
-      shadowOffset: {width: 0, height: 4},
-      shadowOpacity: 0.4,
-      shadowRadius: 8,
-      elevation: 8,
-    },
-    f1ButtonText: {
-      color: '#FFFFFF',
-      fontSize: 16,
-      fontWeight: 'bold',
-      textAlign: 'center',
-    },
-    // Racing Grid Layout
-    racingGrid: {
-      flexDirection: 'row',
-      flexWrap: 'wrap',
-      justifyContent: 'space-between',
-      marginVertical: 16,
-    },
-    gridItem: {
-      width: '48%',
-      backgroundColor: '#1A1A1A',
-      borderRadius: 12,
-      padding: 16,
-      marginBottom: 12,
-      borderWidth: 1,
-      borderColor: '#2A2A2A',
-    },
-    gridItemTitle: {
-      color: '#00E5FF',
-      fontSize: 14,
-      fontWeight: 'bold',
-      marginBottom: 8,
-    },
-    gridItemValue: {
-      color: '#FFFFFF',
-      fontSize: 18,
-      fontWeight: 'bold',
-    },
-    // Performance Meter
-    performanceMeter: {
-      backgroundColor: '#1A1A1A',
-      borderRadius: 12,
-      padding: 16,
-      marginVertical: 12,
-      borderWidth: 1,
-      borderColor: '#2A2A2A',
-    },
-    meterLabel: {
-      color: '#00E5FF',
-      fontSize: 14,
-      fontWeight: 'bold',
-      marginBottom: 8,
-    },
-    meterBar: {
-      height: 8,
-      backgroundColor: '#2A2A2A',
-      borderRadius: 4,
-      overflow: 'hidden',
-    },
-    meterFill: {
-      height: '100%',
-      backgroundColor: '#E10600',
-      borderRadius: 4,
-    },
-    // Racing Stats
-    racingStats: {
-      flexDirection: 'row',
-      justifyContent: 'space-around',
-      backgroundColor: '#1A1A1A',
-      borderRadius: 12,
-      padding: 16,
-      marginVertical: 12,
-      borderWidth: 1,
-      borderColor: '#2A2A2A',
-    },
-    statItem: {
-      alignItems: 'center',
-    },
-    statValue: {
-      color: '#E10600',
-      fontSize: 20,
-      fontWeight: 'bold',
-    },
-    statLabel: {
-      color: '#00E5FF',
-      fontSize: 12,
-      marginTop: 4,
->>>>>>> 083e201e01c56783e564228be2039e30f46fe19c
+
     },
     description: {
       flex: 1,

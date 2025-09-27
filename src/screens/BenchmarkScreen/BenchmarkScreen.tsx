@@ -553,8 +553,6 @@ export const BenchmarkScreen: React.FC = observer(() => {
                     </Button>
 
                     {!isRunning && renderWarningMessage()}
-
-<<<<<<< HEAD
                     <Button
                       testID="start-test-button"
                       mode="contained"
@@ -567,22 +565,7 @@ export const BenchmarkScreen: React.FC = observer(() => {
                         ? `🏁 ${l10n.benchmark.buttons.runningTest}`
                         : `🚀 ${l10n.benchmark.buttons.startTest}`}
                     </Button>
-=======
-                    <View style={styles.f1Button}>
-                      <Button
-                        testID="start-test-button"
-                        mode="contained"
-                        onPress={runBenchmark}
-                        disabled={isRunning}
-                        buttonColor="transparent"
-                        textColor="#FFFFFF"
-                        style={styles.f1Button}>
-                        {isRunning
-                          ? `🏁 ${l10n.benchmark.buttons.runningTest}`
-                          : `🚀 ${l10n.benchmark.buttons.startTest}`}
-                      </Button>
-                    </View>
->>>>>>> 083e201e01c56783e564228be2039e30f46fe19c
+
 
                     {isRunning && (
                       <F1LoadingScreen message={l10n.benchmark.messages.keepScreenOpen} />
