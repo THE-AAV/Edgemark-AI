@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {Image, View} from 'react-native';
+import {View} from 'react-native';
 import {Button, Text} from 'react-native-paper';
 import {observer} from 'mobx-react';
 
@@ -54,11 +54,14 @@ export const ChatEmptyPlaceholder = observer(
     return (
       <View
         style={[styles.container, {marginBottom: bottomComponentHeight + 100}]}>
-        <Image
-          source={require('../../assets/pocketpal-dark-v2.png')}
-          style={styles.logo}
-          resizeMode="contain"
-        />
+        <View style={styles.f1CarContainer}>
+          <Text style={styles.f1CarEmoji}>🏎️</Text>
+          <View style={styles.racingTrack}>
+            <View style={[styles.trackLine, {backgroundColor: theme.colors.primary}]} />
+            <View style={[styles.trackLine, {backgroundColor: theme.colors.primary}]} />
+            <View style={[styles.trackLine, {backgroundColor: theme.colors.primary}]} />
+          </View>
+        </View>
         <View>
           <Text style={styles.title}>{title}</Text>
           <Text style={styles.description}>{description}</Text>
@@ -66,7 +69,7 @@ export const ChatEmptyPlaceholder = observer(
         <Button
           mode="contained"
           onPress={onPress}
-          style={styles.button}
+          style={[styles.button, {backgroundColor: theme.colors.primary}]}
           loading={modelStore.isContextLoading}
           disabled={hasActiveModel}>
           {modelStore.isContextLoading

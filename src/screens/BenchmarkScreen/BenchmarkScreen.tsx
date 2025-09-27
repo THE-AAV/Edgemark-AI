@@ -10,7 +10,7 @@ import {Text, Button, Card, ActivityIndicator, Icon} from 'react-native-paper';
 
 import {submitBenchmark} from '../../api/benchmark';
 
-import {Menu, Dialog, Checkbox} from '../../components';
+import {Menu, Dialog, Checkbox, F1LoadingScreen} from '../../components';
 
 import {useTheme} from '../../hooks';
 import {L10nContext} from '../../utils';
@@ -522,21 +522,19 @@ export const BenchmarkScreen: React.FC = observer(() => {
   return (
     <SafeAreaView style={styles.container} edges={['bottom']}>
       <ScrollView style={styles.scrollView}>
+        {/* F1 Racing Header */}
+        <View style={styles.racingHeader}>
+          <Text style={styles.racingTitle}>🏁 APEXCORE BENCHMARK</Text>
+          <Text style={styles.racingSubtitle}>AI Performance Racing Circuit</Text>
+        </View>
+
         <Card elevation={0} style={styles.card}>
           <Card.Content>
             <DeviceInfoCard onDeviceInfo={handleDeviceInfo} />
             {renderModelSelector()}
 
             {modelStore.loadingModel ? (
-              <View style={styles.loadingContainer}>
-                <ActivityIndicator
-                  testID="loading-indicator-model-init"
-                  size="large"
-                />
-                <Text style={styles.loadingText}>
-                  {l10n.benchmark.messages.initializingModel}
-                </Text>
-              </View>
+              <F1LoadingScreen message={l10n.benchmark.messages.initializingModel} />
             ) : (
               <>
                 {!modelStore.context ? (
@@ -561,22 +559,16 @@ export const BenchmarkScreen: React.FC = observer(() => {
                       mode="contained"
                       onPress={runBenchmark}
                       disabled={isRunning}
-                      style={styles.button}>
+                      buttonColor="#E10600"
+                      textColor="#FFFFFF"
+                      style={[styles.button, {backgroundColor: '#E10600', borderRadius: 12, paddingVertical: 16}]}>
                       {isRunning
-                        ? l10n.benchmark.buttons.runningTest
-                        : l10n.benchmark.buttons.startTest}
+                        ? `🏁 ${l10n.benchmark.buttons.runningTest}`
+                        : `🚀 ${l10n.benchmark.buttons.startTest}`}
                     </Button>
 
                     {isRunning && (
-                      <View style={styles.loadingContainer}>
-                        <ActivityIndicator
-                          testID="loading-indicator-benchmark"
-                          size="large"
-                        />
-                        <Text style={styles.warningText}>
-                          {l10n.benchmark.messages.keepScreenOpen}
-                        </Text>
-                      </View>
+                      <F1LoadingScreen message={l10n.benchmark.messages.keepScreenOpen} />
                     )}
 
                     {renderAdvancedSettings()}
@@ -588,8 +580,8 @@ export const BenchmarkScreen: React.FC = observer(() => {
             {benchmarkStore.results.length > 0 && (
               <View style={styles.resultsCard}>
                 <View style={styles.resultsHeader}>
-                  <Text variant="titleSmall">
-                    {l10n.benchmark.sections.testResults}
+                  <Text style={[styles.resultsTitle, {color: theme.colors.primary}]}>
+                    🏁 {l10n.benchmark.sections.testResults}
                   </Text>
                   <Button
                     testID="clear-all-button"

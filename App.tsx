@@ -75,9 +75,7 @@ const App = observer(() => {
                       drawerStyle: {
                         width: screenWidth > 400 ? 320 : screenWidth * 0.8,
                       },
-                      headerStyle: {
-                        backgroundColor: theme.colors.background,
-                      },
+                      headerStyle: styles.headerWithoutDivider,
                       headerTintColor: theme.colors.onBackground,
                       headerTitleStyle: styles.headerTitle,
                     }}
@@ -158,18 +156,25 @@ const createStyles = (theme: Theme) =>
   StyleSheet.create({
     root: {
       flex: 1,
+      backgroundColor: '#0A0A0A', // F1 Dark racing background
     },
     headerWithoutDivider: {
       elevation: 0,
       shadowOpacity: 0,
       borderBottomWidth: 0,
-      backgroundColor: theme.colors.background,
+      backgroundColor: '#121212', // F1 Surface color
+      borderBottomColor: 'rgba(255, 107, 53, 0.2)', // F1 Orange accent
+      borderBottomWidth: 1,
     },
     headerWithDivider: {
-      backgroundColor: theme.colors.background,
+      backgroundColor: '#121212', // F1 Surface color
+      borderBottomColor: 'rgba(255, 107, 53, 0.2)', // F1 Orange accent
+      borderBottomWidth: 1,
     },
     headerTitle: {
       ...theme.fonts.titleSmall,
+      color: theme.colors.onBackground,
+      fontWeight: '600',
     },
   });
 

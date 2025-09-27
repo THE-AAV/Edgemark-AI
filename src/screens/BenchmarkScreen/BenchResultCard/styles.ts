@@ -4,10 +4,16 @@ import type {Theme} from '../../../utils/types';
 export const createStyles = (theme: Theme) =>
   StyleSheet.create({
     resultCard: {
-      backgroundColor: theme.colors.surface,
-      borderRadius: 16,
-      borderWidth: 1,
-      borderColor: theme.colors.surfaceVariant,
+      backgroundColor: '#FFFFFF', // White background for better text visibility
+      borderRadius: 20,
+      borderWidth: 2,
+      borderColor: 'rgba(255, 107, 53, 0.3)', // F1 Orange border
+      shadowColor: '#FF6B35',
+      shadowOffset: {width: 0, height: 4},
+      shadowOpacity: 0.1,
+      shadowRadius: 8,
+      elevation: 8,
+      marginVertical: 8,
     },
     resultHeader: {
       flexDirection: 'row',
@@ -20,10 +26,10 @@ export const createStyles = (theme: Theme) =>
       marginRight: 16,
     },
     modelName: {
-      color: theme.colors.onSurface,
+      color: '#FF6B35', // F1 Orange
       marginBottom: 4,
-      //fontSize: 18,
-      //fontWeight: '500',
+      fontSize: 18,
+      fontWeight: '700',
     },
     modelMeta: {
       fontSize: 12,
@@ -53,9 +59,11 @@ export const createStyles = (theme: Theme) =>
     },
     resultsContainer: {
       marginBottom: 16,
-      backgroundColor: theme.colors.surfaceVariant,
-      borderRadius: 12,
-      padding: 16,
+      backgroundColor: '#F8F9FA', // Light grey background for better contrast
+      borderRadius: 16,
+      padding: 20,
+      borderWidth: 1,
+      borderColor: 'rgba(255, 107, 53, 0.2)',
     },
     resultRow: {
       flexDirection: 'row',
@@ -68,10 +76,13 @@ export const createStyles = (theme: Theme) =>
       paddingHorizontal: 8,
     },
     resultValue: {
-      fontSize: 16,
-      color: theme.colors.onSurface,
-      fontWeight: '500',
-      marginBottom: 2,
+      fontSize: 20,
+      color: '#FF6B35', // F1 Orange
+      fontWeight: '800',
+      marginBottom: 4,
+      textShadowColor: 'rgba(255, 107, 53, 0.3)',
+      textShadowOffset: {width: 0, height: 1},
+      textShadowRadius: 2,
     },
     resultUnit: {
       fontSize: 13,
@@ -79,10 +90,10 @@ export const createStyles = (theme: Theme) =>
       fontWeight: 'normal',
     },
     resultLabel: {
-      fontSize: 11,
-      color: theme.colors.onSurfaceVariant,
-      marginBottom: 1,
-      letterSpacing: 0.1,
+      fontSize: 14,
+      color: '#C0C0C0', // Silver
+      marginBottom: 4,
+      fontWeight: '600',
     },
     resultStd: {
       fontSize: 10,

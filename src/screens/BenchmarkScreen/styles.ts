@@ -5,7 +5,7 @@ export const createStyles = (theme: Theme) =>
   StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: theme.colors.background,
+      backgroundColor: '#0A0A0A', // F1 Dark racing background
     },
     scrollView: {
       flex: 1,
@@ -13,6 +13,42 @@ export const createStyles = (theme: Theme) =>
     },
     card: {
       marginBottom: 16,
+      backgroundColor: 'rgba(255, 107, 53, 0.05)', // F1 Orange tint
+      borderRadius: 20,
+      borderWidth: 2,
+      borderColor: 'rgba(255, 107, 53, 0.2)', // F1 Orange border
+      shadowColor: '#FF6B35',
+      shadowOffset: {width: 0, height: 4},
+      shadowOpacity: 0.1,
+      shadowRadius: 8,
+      elevation: 8,
+    },
+    // F1 Racing Header
+    racingHeader: {
+      backgroundColor: 'transparent',
+      paddingVertical: 16,
+      paddingHorizontal: 8,
+      marginBottom: 20,
+      alignItems: 'center',
+      borderBottomWidth: 2,
+      borderBottomColor: 'rgba(255, 107, 53, 0.3)',
+      paddingBottom: 16,
+    },
+    racingTitle: {
+      fontSize: 28,
+      fontWeight: '900',
+      color: '#FF6B35', // F1 Orange
+      textAlign: 'center',
+      textShadowColor: 'rgba(255, 107, 53, 0.5)',
+      textShadowOffset: {width: 0, height: 2},
+      textShadowRadius: 4,
+    },
+    racingSubtitle: {
+      fontSize: 14,
+      color: '#C0C0C0', // Silver
+      textAlign: 'center',
+      marginTop: 6,
+      fontWeight: '600',
     },
     description: {
       flex: 1,
@@ -26,7 +62,14 @@ export const createStyles = (theme: Theme) =>
       textAlign: 'center',
     },
     button: {
-      marginVertical: 6,
+      marginVertical: 12,
+      borderRadius: 16,
+      paddingVertical: 18,
+      shadowColor: '#FF6B35',
+      shadowOffset: {width: 0, height: 4},
+      shadowOpacity: 0.3,
+      shadowRadius: 8,
+      elevation: 8,
     },
     loadingContainer: {
       alignItems: 'center',
@@ -115,10 +158,27 @@ export const createStyles = (theme: Theme) =>
       justifyContent: 'space-between',
       alignItems: 'center',
       paddingHorizontal: 8,
+      marginBottom: 16,
+    },
+    resultsTitle: {
+      fontSize: 20,
+      fontWeight: '800',
+      textShadowColor: 'rgba(255, 107, 53, 0.3)',
+      textShadowOffset: {width: 0, height: 1},
+      textShadowRadius: 2,
     },
     resultsCard: {
-      marginTop: 16,
-      padding: 0,
+      marginTop: 20,
+      padding: 16,
+      backgroundColor: 'rgba(255, 107, 53, 0.05)', // F1 Orange tint
+      borderRadius: 20,
+      borderWidth: 2,
+      borderColor: 'rgba(255, 107, 53, 0.2)', // F1 Orange border
+      shadowColor: '#FF6B35',
+      shadowOffset: {width: 0, height: 4},
+      shadowOpacity: 0.1,
+      shadowRadius: 8,
+      elevation: 8,
     },
     resultItem: {
       marginBottom: 16,

@@ -83,30 +83,36 @@ export const SidebarContent: React.FC<DrawerContentComponentProps> = observer(
 
     return (
       <GestureHandlerRootView style={styles.sidebarContainer}>
+        {/* F1 Racing Header */}
+        <View style={styles.racingHeader}>
+          <Text style={styles.racingTitle}>🏁 APEXCORE</Text>
+          <Text style={styles.racingSubtitle}>AI Performance Racing</Text>
+        </View>
+        
         <View style={styles.contentWrapper}>
           <DrawerContentScrollView {...props}>
             <Drawer.Section showDivider={false}>
               <Drawer.Item
                 label={l10n.components.sidebarContent.menuItems.chat}
-                icon={() => <ChatIcon stroke={theme.colors.primary} />}
+                icon={() => <ChatIcon stroke="#C0C0C0" />}
                 onPress={() => props.navigation.navigate(ROUTES.CHAT)}
                 style={styles.menuDrawerItem}
               />
               <Drawer.Item
                 label={l10n.components.sidebarContent.menuItems.models}
-                icon={() => <ModelIcon stroke={theme.colors.primary} />}
+                icon={() => <ModelIcon stroke="#C0C0C0" />}
                 onPress={() => props.navigation.navigate(ROUTES.MODELS)}
                 style={styles.menuDrawerItem}
               />
               <Drawer.Item
                 label={l10n.components.sidebarContent.menuItems.pals}
-                icon={() => <PalIcon stroke={theme.colors.primary} />}
+                icon={() => <PalIcon stroke="#C0C0C0" />}
                 onPress={() => props.navigation.navigate(ROUTES.PALS)}
                 style={styles.menuDrawerItem}
               />
               <Drawer.Item
                 label={l10n.components.sidebarContent.menuItems.benchmark}
-                icon={() => <BenchmarkIcon stroke={theme.colors.primary} />}
+                icon={() => <BenchmarkIcon stroke="#C0C0C0" />}
                 onPress={() => props.navigation.navigate(ROUTES.BENCHMARK)}
                 style={styles.menuDrawerItem}
               />
@@ -116,7 +122,7 @@ export const SidebarContent: React.FC<DrawerContentComponentProps> = observer(
                   <SettingsIcon
                     width={24}
                     height={24}
-                    stroke={theme.colors.primary}
+                    stroke="#C0C0C0"
                   />
                 )}
                 onPress={() => props.navigation.navigate(ROUTES.SETTINGS)}
@@ -129,7 +135,7 @@ export const SidebarContent: React.FC<DrawerContentComponentProps> = observer(
                   <AppInfoIcon
                     width={24}
                     height={24}
-                    stroke={theme.colors.primary}
+                    stroke="#C0C0C0"
                   />
                 )}
                 onPress={() => props.navigation.navigate(ROUTES.APP_INFO)}

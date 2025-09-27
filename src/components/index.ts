@@ -18,6 +18,7 @@ export * from './Divider';
 export * from './DownloadErrorDialog';
 export * from './EmbeddedVideoView';
 export * from './ErrorSnackbar';
+export * from './F1LoadingScreen';
 export * from './FileMessage';
 export * from './HeaderRight';
 export * from './HeaderLeft';

@@ -8,12 +8,12 @@ import {MD3BaseColors, SemanticColors, Theme} from './types';
 import {withOpacity, stateLayerOpacity} from './colorUtils';
 
 // MD3 key colors (seed colors)
-// ApexCore F1-inspired palette: deep blacks, race-red accents, cool cyan highlights
+// ApexCore F1-inspired palette: F1 orange, silver accents, dark racing theme
 const md3BaseColors: Partial<MD3BaseColors> = {
-  primary: '#0A0A0A', // near-black surface/brand base
-  secondary: '#E10600', // F1 red accent
-  tertiary: '#00E5FF', // cyan tech highlight
-  error: '#FF4D4F',
+  primary: '#FF6B35', // F1 Orange
+  secondary: '#C0C0C0', // Silver (Mercedes style)
+  tertiary: '#FFD700', // Gold highlights
+  error: '#FF4444', // Racing red
 };
 
 const createBaseColors = (isDark: boolean): MD3BaseColors => {
@@ -22,35 +22,35 @@ const createBaseColors = (isDark: boolean): MD3BaseColors => {
   if (isDark) {
     return {
       ...baseTheme.colors,
-      primary: '#E5E5E5',
-      onPrimary: '#121212',
+      primary: md3BaseColors.primary!,
+      onPrimary: '#FFFFFF',
       primaryContainer: '#1A1A1A',
-      onPrimaryContainer: '#F5F5F5',
+      onPrimaryContainer: '#FF6B35',
       secondary: md3BaseColors.secondary!,
-      onSecondary: '#FFFFFF',
-      secondaryContainer: '#3A0A08',
-      onSecondaryContainer: '#FFD6D4',
+      onSecondary: '#000000',
+      secondaryContainer: '#2A2A2A',
+      onSecondaryContainer: '#C0C0C0',
       tertiary: md3BaseColors.tertiary!,
-      onTertiary: '#001014',
-      tertiaryContainer: '#07343A',
-      onTertiaryContainer: '#B6F6FF',
+      onTertiary: '#000000',
+      tertiaryContainer: '#2A2A00',
+      onTertiaryContainer: '#FFD700',
       error: md3BaseColors.error!,
-      onError: '#2B0A0A',
+      onError: '#FFFFFF',
       errorContainer: '#5A1414',
       onErrorContainer: '#FFE2E2',
-      background: '#000000',
+      background: '#0A0A0A', // Dark racing background
       onBackground: '#FFFFFF',
-      surface: '#0F0F10',
-      onSurface: '#EDEDED',
-      surfaceVariant: '#2A2A2B',
-      onSurfaceVariant: '#C9C9CC',
-      outline: '#3A3A3C',
-      outlineVariant: '#6E6E73',
+      surface: '#121212', // Slightly lighter than background
+      onSurface: '#FFFFFF',
+      surfaceVariant: '#1A1A1A',
+      onSurfaceVariant: '#C0C0C0',
+      outline: '#333333',
+      outlineVariant: '#666666',
       // Additional required MD3 colors
       surfaceDisabled: withOpacity('#1E1E1F', 0.12),
-      onSurfaceDisabled: withOpacity('#EDEDED', 0.38),
-      inverseSurface: '#EDEDED',
-      inverseOnSurface: '#121212',
+      onSurfaceDisabled: withOpacity('#C0C0C0', 0.38),
+      inverseSurface: '#FFFFFF',
+      inverseOnSurface: '#000000',
       inversePrimary: '#1A1A1A',
       inverseSecondary: md3BaseColors.secondary!,
       shadow: '#000000',

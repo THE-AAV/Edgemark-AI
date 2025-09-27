@@ -24,9 +24,24 @@ export const createStyles = ({theme}: {theme: Theme}) =>
     button: {
       minWidth: 200,
     },
-    logo: {
-      width: 112,
-      height: 112,
-      borderRadius: 30,
+    f1CarContainer: {
+      alignItems: 'center',
+      marginBottom: 20,
+    },
+    f1CarEmoji: {
+      fontSize: 80,
+      marginBottom: 10,
+    },
+    racingTrack: {
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      width: 200,
+      height: 20,
+      alignItems: 'center',
+    },
+    trackLine: {
+      width: 40,
+      height: 3,
+      borderRadius: 2,
     },
   });

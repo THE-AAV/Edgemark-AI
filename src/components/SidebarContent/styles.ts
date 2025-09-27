@@ -6,7 +6,32 @@ export const createStyles = (theme: MD3Theme) =>
   StyleSheet.create({
     sidebarContainer: {
       flex: 1,
-      backgroundColor: theme.colors.surface,
+      backgroundColor: '#0A0A0A', // F1 Dark racing background
+    },
+    // F1 Racing Header
+    racingHeader: {
+      backgroundColor: 'transparent',
+      paddingVertical: 20,
+      paddingHorizontal: 16,
+      alignItems: 'flex-start',
+      borderBottomWidth: 0,
+      marginTop: 10,
+    },
+    racingTitle: {
+      fontSize: 20,
+      fontWeight: '800',
+      color: '#FF6B35', // F1 Orange
+      textAlign: 'left',
+      marginBottom: 4,
+      textShadowColor: 'rgba(255, 107, 53, 0.3)',
+      textShadowOffset: {width: 0, height: 2},
+      textShadowRadius: 4,
+    },
+    racingSubtitle: {
+      fontSize: 12,
+      color: '#C0C0C0', // Silver
+      textAlign: 'left',
+      fontWeight: '500',
     },
     divider: {
       marginHorizontal: 16,
