@@ -154,10 +154,7 @@ const styles = StyleSheet.create({
   carEmoji: {
     fontSize: 28,
     opacity: 1,  // Ensure full opacity
-    textShadowColor: 'rgba(0, 0, 0, 0.25)',  // Add shadow for better visibility
-    textShadowOffset: { width: 1, height: 1 },
-    textShadowRadius: 2
-    textShadowColor: 'rgba(0, 0, 0, 0.5)',
+    textShadowColor: 'rgba(0, 0, 0, 0.5)',  // Shadow for better visibility
     textShadowOffset: {width: 1, height: 1},
     textShadowRadius: 2,
   },

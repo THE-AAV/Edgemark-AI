@@ -10,6 +10,10 @@ apply plugin: "com.google.gms.google-services"
 
 apply from: "../../node_modules/react-native-config/android/dotenv.gradle"
 
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
 /**
  * This is the configuration block to customize your React Native Android app.
  * By default you don't need to apply any configuration, just uncomment the lines you need.
@@ -104,10 +108,10 @@ android {
             keyPassword 'android'
         }
         release {
-            storeFile file("pocketpal-release-key.keystore")
-            storePassword project.env.get("APP_RELEASE_STORE_PASSWORD")
-            keyAlias "pocketpal_key_alias"
-            keyPassword project.env.get("APP_RELEASE_KEY_PASSWORD")
+            storeFile file("../apexcore.keystore")
+            storePassword keystoreProperties['storePassword']
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
         }
     }
     buildTypes {
